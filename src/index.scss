@@ -1,0 +1,186 @@
+@import "./constant.scss";
+// @import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css";
+
+body {
+  font-family: $bodyFont !important;
+}
+header {
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06);;
+}
+aside {
+    padding-top: 1rem;
+    min-height: 80vh;
+}
+// ##############################################################
+// Page Layout ##################################################
+// ##############################################################
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: $colorPrimary;
+}
+
+.ant-layout-content {
+  margin: $layoutMargin;
+  padding: $layoutPadding;
+  min-height: 100vh !important;
+}
+
+.breadcumb-row {
+  margin: $layoutMargin;
+  padding: $layoutPadding;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.ant-menu li:hover {
+  .ant-menu-item-icon {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+  }
+  .ant-menu-title-content {
+    margin-left: 15px;
+    transition: all 0.2s ease;
+  }
+}
+
+.transition-scale:hover {
+  .element {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+  }
+  span {
+    margin-left: 5px;
+    transition: all 0.2s ease;
+  }
+  .license-image-element {
+    padding: 2px !important;
+    transition: all 0.2s ease;
+  }
+}
+
+//  ###############################################################################
+// License Top bar Style ##########################################################
+//  ###############################################################################
+.license-card,
+.feature-card {
+  padding: $layoutPadding;
+}
+.license-card {
+  display: flex;
+  .license-card-heading {
+    flex: 3;
+  }
+  .license-card-expiry {
+    flex: 2;
+    background-color: $colorBlack;
+    color: $colorWhite;
+    margin: -10px -12px;
+    padding: $layoutPadding;
+    position: relative;
+    .license-details {
+      line-height: 1;
+      .main-heading {
+        margin-bottom: 13px;
+      }
+      .date-heading,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $colorWhite;
+        // margin: 0;
+      }
+      .date-heading {
+        font-weight: 400;
+      }
+      .status {
+        align-self: flex-end;
+      }
+    }
+    .license-action {
+      position: absolute;
+      top: 6px;
+      right: 34px;
+    }
+  }
+
+  .license-card-dropdown {
+    flex: 1 1;
+    background-color: $colorPrimary;
+    border-left: 1px solid $colorWhite;
+    color: $colorWhite;
+    margin: -10px -12px !important;
+
+    .ant-select-selector {
+      height: 100% !important;
+      background-color: $colorPrimary !important;
+      border: none !important;
+    }
+    .ant-select-selection-item {
+      margin: auto;
+    }
+    .ant-select-arrow {
+      color: $colorWhite;
+    }
+  }
+}
+
+//  ###############################################################################
+// Sidebar Style ##################################################################
+//  ###############################################################################
+.ant-layout-sider-children {
+  position: relative;
+}
+.toggle-collapse {
+  position: absolute;
+  cursor: pointer;
+  right: -18px;
+  width: 18px;
+  padding: 35px 2px;
+  top: 160px;
+  z-index: 1;
+  background: $colorPrimary;
+  color: #fff;
+  border: none;
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+  span {
+    padding: 0;
+  }
+}
+.toggle-collapse:hover {
+  color: #fff;
+}
+.ant-layout-sider-children {
+  .ant-menu-inline .ant-menu-item:after,
+  .ant-menu-vertical-left .ant-menu-item:after,
+  .ant-menu-vertical-right .ant-menu-item:after,
+  .ant-menu-vertical .ant-menu-item:after {
+    right: unset;
+    left: 0;
+    border-right: 7px solid $colorPrimary;
+    clip-path: polygon(0 0, 35% 0, 100% 50%, 35% 100%, 0 100%);
+  }
+}
+.tiny {
+  font-size: 0.7rem;
+  color: $colorBlack;
+}
+.text-end {
+  text-align: end;
+}
+.ant-form-item-control-input-content .colorHex {
+  position: absolute;
+  bottom: 6px;
+  left: 60px;
+}
