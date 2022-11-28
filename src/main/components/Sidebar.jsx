@@ -17,14 +17,10 @@ import {
   SyncOutlined,
   RiseOutlined,
   BookOutlined,
-  CloudDownloadOutlined,
-  // BarsOutlined,
+  CloudDownloadOutlined
 } from "@ant-design/icons";
-
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import logo from "../../images/logo.svg";
-import logoFull from "../../images/logo-full.jpg";
 import { NavLink } from "react-router-dom";
 import { toggleCollapse } from "../actions";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -32,10 +28,9 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 export default function Sidebar() {
   const dispatch = useDispatch();
-  const { collapsed, settings, menu } = useSelector((state) => state.common);
+  const { collapsed, settings } = useSelector((state) => state.common);
   const theme = settings.theme ? settings.theme : "light";
   const { Sider } = Layout;
-
   const SidebarJson = [
     {
       name: "Dashboard",
@@ -168,37 +163,14 @@ export default function Sidebar() {
     },
   ];
 
-  menu.map((el) => {
-    if (el.group === "Synchronize Now") {
-      SidebarJson[3].children.push({
-        name: el.title,
-        icon: <i className={el.icon}></i>,
-        path: el.url,
-        display: true,
-      });
-    } else {
-      SidebarJson[4].children.push({
-        name: el.title,
-        icon: <i className={el.icon}></i>,
-        path: `SelectiveSync${el.url}?title=${el.title}`,
-        display: true,
-      });
-    }
-  });
-
   return (
     <Sider
       theme={theme}
-      trigger={null}
       width={220}
       collapsible
       collapsed={collapsed}
       collapsedWidth={60}
     >
-      <div
-        className="logo"
-        style={{ background: `url(${collapsed ? logo : logoFull})` }}
-      />
       <span
         className="toggle-collapse"
         onClick={() => dispatch(toggleCollapse({ collapsed }))}

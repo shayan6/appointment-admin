@@ -2,7 +2,8 @@
 // @import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css";
 
 body {
-  font-family: $bodyFont !important;
+    margin: 0 auto;
+    font-family: $bodyFont !important;
 }
 header {
     border-bottom: 1px solid rgba(5, 5, 5, 0.06);;
@@ -11,9 +12,33 @@ aside {
     padding-top: 1rem;
     min-height: 80vh;
 }
+.logo img {
+    height: 32px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+
 // ##############################################################
 // Page Layout ##################################################
 // ##############################################################
+[type="color"] {
+  appearance: none;
+  padding: 0;
+  width: 3rem !important;
+  height: 1.5rem !important;
+  border: none;
+  border-radius: 8px;
+}
+[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
 .trigger {
   padding: 0 24px;
   font-size: 18px;
@@ -64,75 +89,6 @@ aside {
   .license-image-element {
     padding: 2px !important;
     transition: all 0.2s ease;
-  }
-}
-
-//  ###############################################################################
-// License Top bar Style ##########################################################
-//  ###############################################################################
-.license-card,
-.feature-card {
-  padding: $layoutPadding;
-}
-.license-card {
-  display: flex;
-  .license-card-heading {
-    flex: 3;
-  }
-  .license-card-expiry {
-    flex: 2;
-    background-color: $colorBlack;
-    color: $colorWhite;
-    margin: -10px -12px;
-    padding: $layoutPadding;
-    position: relative;
-    .license-details {
-      line-height: 1;
-      .main-heading {
-        margin-bottom: 13px;
-      }
-      .date-heading,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: $colorWhite;
-        // margin: 0;
-      }
-      .date-heading {
-        font-weight: 400;
-      }
-      .status {
-        align-self: flex-end;
-      }
-    }
-    .license-action {
-      position: absolute;
-      top: 6px;
-      right: 34px;
-    }
-  }
-
-  .license-card-dropdown {
-    flex: 1 1;
-    background-color: $colorPrimary;
-    border-left: 1px solid $colorWhite;
-    color: $colorWhite;
-    margin: -10px -12px !important;
-
-    .ant-select-selector {
-      height: 100% !important;
-      background-color: $colorPrimary !important;
-      border: none !important;
-    }
-    .ant-select-selection-item {
-      margin: auto;
-    }
-    .ant-select-arrow {
-      color: $colorWhite;
-    }
   }
 }
 
