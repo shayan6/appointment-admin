@@ -12,7 +12,7 @@ export default function NavBar() {
   }));
 
   return (
-    <Header className={theme === "light" ? "ant-layout-sider-light" : ""}>
+    <Header className={theme === "light" ? "ant-layout-sider-light" : "ant-layout-sider-dark"}>
       <Row>
         <Col span={4}>
           <div className="logo">

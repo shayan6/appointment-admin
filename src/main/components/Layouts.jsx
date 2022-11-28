@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { Layout as MainLayout } from "antd";
+import { Col, Divider, Layout as MainLayout, Row } from "antd";
 import Sidebar from "./Sidebar";
 import Dashboard from "../../containers/dashboard/Dashboard";
 import NavBar from "./NavBar";
@@ -23,7 +23,14 @@ export default function Layouts() {
               <Route path="*" element={<Dashboard />} />
               <Route path="/Settings" element={<Settings />} />
             </Routes>
-            <Footer style={{ textAlign: "center" }}>Powered by Shayan Shaikh</Footer>
+            <Row gutter={18}>
+              <Col span={24}>
+                <Divider />
+              </Col>
+            </Row>
+            <Footer style={{ textAlign: "center" }}>
+              Powered by Shayan Shaikh
+            </Footer>
           </Content>
         </MainLayout>
       </HashRouter>
