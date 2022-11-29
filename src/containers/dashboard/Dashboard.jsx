@@ -1,6 +1,10 @@
 import React from "react";
 import { Col, Row, Layout, Card, Divider } from "antd";
 import BreadCumb from "../../main/components/BreadCumb";
+import PaymentsChart from "./components/PaymentsChart";
+import KpisCharts from "./components/KpisCharts";
+import ConversionsChart from "./components/ConversionsChart";
+import GadgesChart from "./components/GadgesChart";
 
 export default function Dashboard() {
   return (
@@ -8,7 +12,7 @@ export default function Dashboard() {
       <Col span={24}>
         <BreadCumb path="Dashboard"></BreadCumb>
       </Col>
-      <Col span={15}>
+      <Col span={16}>
         <Row>
           <Col span={24}>
             <Card>Filters</Card>
@@ -35,11 +39,11 @@ export default function Dashboard() {
           <Col span={24}>
             <Divider />
           </Col>
-          <Col span={12}>
-            <Card>Graph</Card>
+          <Col span={15}>
+            <KpisCharts />
           </Col>
-          <Col span={12}>
-            <Card>Graph</Card>
+          <Col span={9}>
+            <ConversionsChart />
           </Col>
         </Row>
         <Row>
@@ -51,23 +55,12 @@ export default function Dashboard() {
           </Col>
         </Row>
       </Col>
-      <Col span={1} style={{ textAlign: 'center' }} >
-        <Divider type="vertical" style={{ height: '100%' }} />
+      <Col span={1} style={{ textAlign: "center" }}>
+        <Divider type="vertical" style={{ height: "100%" }} />
       </Col>
-      <Col span={8}>
-        <Row>
-          <Col span={24}>
-            <Card>Payment</Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col span={24}>
-            <Divider />
-          </Col>
-          <Col span={24}>
-            <Card>Funnel</Card>
-          </Col>
-        </Row>
+      <Col span={7}>
+        <GadgesChart />
+        <PaymentsChart />
         <Row>
           <Col span={24}>
             <Divider />

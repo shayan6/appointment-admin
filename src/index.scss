@@ -1,38 +1,42 @@
 @import "./constant.scss";
-// @import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css";
 
-body {
-    margin: 0 auto;
-    font-family: $bodyFont !important;
-}
-header {
-    border-bottom: 1px solid rgba(5, 5, 5, 0.06);;
-}
-.ant-menu {
-  border: none !important;
-}
-aside {
-    padding-top: 1rem;
-    border-right: 1px solid rgba(5, 5, 5, 0.06);
-}
-.ant-layout-content {
-  margin: $layoutMargin;
-  padding: $layoutPadding;
-  min-height: 90vh !important;
-}
-.logo img {
-    height: 32px;
-    margin-right: 12px;
-    vertical-align: middle;
-}
-.breadcrumb {
-  margin-bottom: 1rem;
-}
-.ant-divider-horizontal {
-  margin: 1rem 0;
-}
 // ##############################################################
 // Page Layout ##################################################
+// ##############################################################
+body {
+  margin: 0 auto;
+  font-family: $bodyFont !important;
+}
+header {
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06);;
+}
+.ant-menu {
+border: none !important;
+}
+aside {
+  padding-top: 1rem;
+  border-right: 1px solid rgba(5, 5, 5, 0.06);
+}
+.ant-layout-content {
+margin: $layoutMargin;
+padding: $layoutPadding;
+min-height: 90vh !important;
+}
+.logo img {
+  height: 32px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+.breadcrumb {
+margin-bottom: 1rem;
+}
+.ant-divider-horizontal {
+margin: 1rem 0;
+}
+
+// ##############################################################
+// Settings #####################################################
 // ##############################################################
 [type="color"] {
   appearance: none;
@@ -49,6 +53,40 @@ aside {
   border: none;
 }
 
+//  ###############################################################################
+// Theme ##########################################################################
+//  ###############################################################################
+.ant-layout .ant-layout-header.ant-layout-sider-dark .logo span {
+  color: rgba(255, 255, 255, 0.65);
+}
+.ant-layout-sider.ant-layout-sider-light,
+.ant-layout-header.ant-layout-sider-light,
+.ant-menu-light {
+  background-color: transparent;
+}
+
+//  ###############################################################################
+// Sidebar Style ##################################################################
+//  ###############################################################################
+.ant-layout-sider-children {
+  position: relative;
+}
+.toggle-collapse {
+  position: absolute;
+  cursor: pointer;
+  right: -18px;
+  width: 18px;
+  padding: 35px 2px;
+  top: 160px;
+  z-index: 1;
+  background: $colorPrimary;
+  color: #fff;
+  border: none;
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+  span {
+    padding: 0;
+  }
+}
 .trigger {
   padding: 0 24px;
   font-size: 18px;
@@ -86,68 +124,4 @@ aside {
     padding: 2px !important;
     transition: all 0.2s ease;
   }
-}
-
-//  ###############################################################################
-// Theme ##########################################################################
-//  ###############################################################################
-.ant-layout .ant-layout-header.ant-layout-sider-dark .logo span {
-  color: rgba(255, 255, 255, 0.65);
-}
-.ant-layout-sider.ant-layout-sider-light,
-.ant-layout-header.ant-layout-sider-light,
-.ant-menu-light {
-  background-color: transparent;
-}
-
-//  ###############################################################################
-// Sidebar Style ##################################################################
-//  ###############################################################################
-.ant-layout-sider-children {
-  position: relative;
-}
-.toggle-collapse {
-  position: absolute;
-  cursor: pointer;
-  right: -18px;
-  width: 18px;
-  padding: 35px 2px;
-  top: 160px;
-  z-index: 1;
-  background: $colorPrimary;
-  color: #fff;
-  border: none;
-  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
-  span {
-    padding: 0;
-  }
-}
-.toggle-collapse:hover {
-  color: #fff;
-}
-.ant-layout-sider-children {
-  .ant-menu-inline .ant-menu-item:after,
-  .ant-menu-vertical-left .ant-menu-item:after,
-  .ant-menu-vertical-right .ant-menu-item:after,
-  .ant-menu-vertical .ant-menu-item:after {
-    right: unset;
-    left: 0;
-    border-right: 7px solid $colorPrimary;
-    clip-path: polygon(0 0, 35% 0, 100% 50%, 35% 100%, 0 100%);
-  }
-}
-.tiny {
-  font-size: 0.7rem;
-  color: $colorBlack;
-}
-.text-end {
-  text-align: end;
-}
-.ant-form-item-control-input-content .colorHex {
-  position: absolute;
-  bottom: 6px;
-  left: 60px;
-}
-.ant-layout-sider-trigger {
-  display: none;
 }
