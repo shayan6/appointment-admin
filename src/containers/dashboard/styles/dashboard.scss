@@ -1,0 +1,59 @@
+@import "../../../constant.scss";
+
+//  ###############################################################################
+// Dashboard Style ################################################################
+//  ###############################################################################
+.el-tablo:hover {
+  box-shadow: inset 0 -300px 1px 0 $colorPrimary;
+  color: $colorWhite;
+  .iconCircle {
+    background-color: $colorWhite;
+    color: $colorPrimary;
+    transform: rotateY(360deg);
+    -webkit-transition: -webkit-transform 0.7s ease-in;
+    transition: -webkit-transform 0.7s ease-in;
+  }
+  .ant-typography {
+    color: $colorWhite;
+  }
+}
+.el-tablo {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 $colorPrimary;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+  padding: 0;
+  .ant-space-item {
+    line-height: 1;
+  }
+  .ant-typography {
+    line-height: 1;
+    color: $colorPrimary;
+    -webkit-transition: color 0.7s ease-in;
+    transition: color 0.7s ease-in;
+    &.value {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.iconCircle {
+  top: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: $colorPrimary;
+  font-size: 20px;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+.iconCircle {
+  background-color: rgba(6, 155, 211, 0.1);
+}

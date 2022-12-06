@@ -5,6 +5,8 @@ import PaymentsChart from "./components/PaymentsChart";
 import KpisCharts from "./components/KpisCharts";
 import ConversionsChart from "./components/ConversionsChart";
 import GadgesChart from "./components/GadgesChart";
+import HoverButtons from "./components/HoverButtons";
+import "./styles/dashboard.scss";
 
 export default function Dashboard() {
   return (
@@ -18,23 +20,7 @@ export default function Dashboard() {
             <Card>Filters</Card>
           </Col>
         </Row>
-        <Row gutter={18}>
-          <Col span={24}>
-            <Divider />
-          </Col>
-          <Col span={6}>
-            <Card>User</Card>
-          </Col>
-          <Col span={6}>
-            <Card>User</Card>
-          </Col>
-          <Col span={6}>
-            <Card>User</Card>
-          </Col>
-          <Col span={6}>
-            <Card>User</Card>
-          </Col>
-        </Row>
+        <HoverButtons />
         <Row gutter={16}>
           <Col span={24}>
             <Divider />
@@ -43,7 +29,7 @@ export default function Dashboard() {
             <KpisCharts />
           </Col>
           <Col span={9}>
-            <ConversionsChart />
+            <GadgesChart />
           </Col>
         </Row>
         <Row>
@@ -59,7 +45,7 @@ export default function Dashboard() {
         <Divider type="vertical" style={{ height: "100%" }} />
       </Col>
       <Col span={7}>
-        <GadgesChart />
+        <ConversionsChart />
         <PaymentsChart />
         <Row>
           <Col span={24}>

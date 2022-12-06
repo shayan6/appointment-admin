@@ -7,55 +7,57 @@ export default function ConversionsChart() {
     {
       stage: "简历筛选",
       number: 253,
-      company: "A公司",
+      company: "Yesterday",
     },
     {
       stage: "初试人数",
       number: 151,
-      company: "A公司",
+      company: "Yesterday",
     },
     {
       stage: "复试人数",
       number: 113,
-      company: "A公司",
+      company: "Yesterday",
     },
     {
       stage: "录取人数",
       number: 87,
-      company: "A公司",
+      company: "Yesterday",
     },
     {
       stage: "入职人数",
       number: 59,
-      company: "A公司",
+      company: "Yesterday",
     },
     {
       stage: "简历筛选",
       number: 303,
-      company: "B公司",
+      company: "Today",
     },
     {
       stage: "初试人数",
       number: 251,
-      company: "B公司",
+      company: "Today",
     },
     {
       stage: "复试人数",
       number: 153,
-      company: "B公司",
+      company: "Today",
     },
     {
       stage: "录取人数",
       number: 117,
-      company: "B公司",
+      company: "Today",
     },
     {
       stage: "入职人数",
       number: 79,
-      company: "B公司",
+      company: "Today",
     },
   ];
   const config = {
+    width: 500,
+    height: 200,
     data,
     xField: "stage",
     yField: "number",

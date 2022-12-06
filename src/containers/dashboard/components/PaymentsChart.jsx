@@ -57,6 +57,8 @@ export default function PaymentsChart() {
     },
   ];
   const config = {
+    width: 500,
+    height: 220,
     appendPadding: 10,
     data,
     angleField: "value",

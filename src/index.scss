@@ -9,19 +9,19 @@ body {
   font-family: $bodyFont !important;
 }
 header {
-  border-bottom: 1px solid rgba(5, 5, 5, 0.06);;
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
 }
 .ant-menu {
-border: none !important;
+  border: none !important;
 }
 aside {
   padding-top: 1rem;
   border-right: 1px solid rgba(5, 5, 5, 0.06);
 }
 .ant-layout-content {
-margin: $layoutMargin;
-padding: $layoutPadding;
-min-height: 90vh !important;
+  margin: $layoutMargin;
+  padding: $layoutPadding;
+  min-height: 90vh !important;
 }
 .logo img {
   height: 32px;
@@ -29,10 +29,13 @@ min-height: 90vh !important;
   vertical-align: middle;
 }
 .breadcrumb {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .ant-divider-horizontal {
-margin: 1rem 0;
+  margin: 1rem 0;
+}
+.text-right {
+  text-align: right;
 }
 
 // ##############################################################
