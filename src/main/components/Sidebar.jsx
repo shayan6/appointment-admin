@@ -17,7 +17,8 @@ import {
   SyncOutlined,
   RiseOutlined,
   BookOutlined,
-  CloudDownloadOutlined
+  CloudDownloadOutlined,
+  CalendarOutlined
 } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,22 +38,25 @@ export default function Sidebar() {
       icon: <DashboardOutlined />,
       path: "Dashboard",
       display: true,
-      children: null,
       isActive: true,
+    },
+    {
+      name: "Appointments",
+      icon: <CalendarOutlined />,
+      path: "Appointments",
+      display: true,
     },
     {
       name: "Connectors",
       icon: <LinkOutlined />,
       path: "Connectors",
       display: true,
-      children: null,
     },
     {
       name: "Failed Records",
       icon: <ReconciliationOutlined />,
       path: "FailedRecords",
       display: true,
-      children: null,
     },
     {
       name: "Synchronize Now",
@@ -86,71 +90,52 @@ export default function Sidebar() {
       name: "Inventory Adjustment",
       icon: <CodeSandboxOutlined />,
       path: "dummylink1",
-      // display: true,
-      children: null,
     },
     {
       name: "Item Fulfillments",
       icon: <FileDoneOutlined />,
       path: "dummylink2",
-      // display: true,
-      children: null,
     },
     {
       name: "Item Reciept",
       icon: <DeliveredProcedureOutlined />,
       path: "dummylink3",
-      // display: true,
-      children: null,
     },
     {
       name: "Master Data",
       icon: <DatabaseOutlined />,
       path: "dummylink4",
-      // display: true,
-      children: null,
     },
     {
       name: "Purchase Order",
       icon: <DollarCircleOutlined />,
       path: "dummylink5",
-      // display: true,
-      children: null,
     },
     {
       name: "Return Authorization",
       icon: <RedoOutlined />,
       path: "dummylink6",
-      // display: true,
-      children: null,
     },
     {
       name: "Sales Order",
       icon: <FileTextOutlined />,
       path: "dummylink7",
-      // display: true,
-      children: null,
     },
     {
       name: "Transfer Order As PO",
       icon: <UserOutlined />,
       path: "dummylink8",
-      // display: true,
-      children: null,
     },
     {
       name: "Transfer Order As SO",
       icon: <FileProtectOutlined />,
       path: "dummylink9",
-      // display: true,
-      children: null,
     },
     {
       name: "F3 Debugger",
       icon: <BugOutlined />,
       path: "Debugger",
       display: settings?.showDebugger,
-      children: null,
       // external: true,
     },
     {
@@ -158,7 +143,6 @@ export default function Sidebar() {
       icon: <SettingOutlined />,
       path: "Settings",
       display: true,
-      children: null,
       // external: true,
     },
   ];
@@ -217,6 +201,7 @@ export default function Sidebar() {
               </Menu.SubMenu>
             );
           }
+          return null;
         })}
       </Menu>
     </Sider>

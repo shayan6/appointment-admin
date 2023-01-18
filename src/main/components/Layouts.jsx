@@ -6,6 +6,7 @@ import Dashboard from "../../containers/dashboard/Dashboard";
 import NavBar from "./NavBar";
 import Settings from "../../containers/settings/Settings";
 import { Content } from "antd/es/layout/layout";
+import Appointments from "../../containers/appointments/Appointments";
 // import PageLoader from "./PageLoader";
 
 export default function Layouts() {
@@ -21,6 +22,7 @@ export default function Layouts() {
           <Content>
             <Routes>
               <Route path="*" element={<Dashboard />} />
+              <Route path="/Appointments" element={<Appointments />} />
               <Route path="/Settings" element={<Settings />} />
             </Routes>
             <Row gutter={18}>

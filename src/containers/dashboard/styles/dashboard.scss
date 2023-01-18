@@ -1,4 +1,4 @@
-@import "../../../constant.scss";
+@import "./../../../main/styles/constant.scss";
 
 //  ###############################################################################
 // Dashboard Style ################################################################
@@ -56,4 +56,165 @@
 
 .iconCircle {
   background-color: rgba(6, 155, 211, 0.1);
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table.table-padded {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+.table.table-padded thead tr th {
+  border: none;
+  font-size: .81rem;
+  color: rgba(90,99,126,0.49);
+  letter-spacing: 1px;
+  padding: 0.3rem 1.1rem;
+}
+.table tfoot th, .table thead th {
+  font-size: .63rem;
+  text-transform: uppercase;
+  border-top: none;
+}
+.table.table-padded tbody tr {
+  border-radius: 4px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.table.table-padded tbody td:first-child {
+  border-radius: 4px 0px 0px 4px;
+}
+.table.table-padded tbody td {
+  padding: 0.9rem 1.1rem;
+  background-color: #fff;
+  border: none;
+  border-right: 1px solid rgba(0,0,0,0.03);
+}
+.table .user-with-avatar {
+  white-space: nowrap;
+}
+.table .lighter {
+  color: rgba(90,99,126,0.49);
+}
+.table .user-with-avatar {
+  white-space: nowrap;
+}
+.table.table-padded tbody td img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.table .user-with-avatar img {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50px;
+}
+.table.table-padded tbody td img+span {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.activity-boxes-w .activity-box-w {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.8rem 0px;
+  position: relative;
+}
+.activity-boxes-w .activity-time {
+  -webkit-box-flex: 0;
+  flex: 0 0 100px;
+  font-size: .63rem;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+  text-align: right;
+  padding-right: 40px;
+}
+.activity-boxes-w .activity-box-w:first-child:before {
+  top: 50%;
+}
+.activity-boxes-w .activity-box-w:last-child:before {
+  bottom: 50%;
+}
+.activity-boxes-w .activity-box-w:before {
+  content: "";
+  display: block;
+  width: 3px;
+  background-color: #c0cadd;
+  top: 0px;
+  bottom: 0px;
+  left: 75px;
+  position: absolute;
+}
+.activity-boxes-w .activity-box {
+  padding: 0.8rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.activity-boxes-w .activity-box:before {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #60769f;
+  background-color: #f2f4f8;
+  border-radius: 20px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.activity-boxes-w .activity-avatar {
+  width: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 1.1rem;
+}
+.activity-boxes-w .activity-avatar img {
+  max-width: 100%;
+  height: auto;
+}
+.activity-boxes-w .activity-info {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.activity-boxes-w .activity-role {
+  font-size: .63rem;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+  margin-bottom: 0.2rem;
+}
+.activity-boxes-w .activity-title {
+  font-size: .63rem;
+  text-transform: uppercase;
+  display: block;
+}
+.box-style, .user-profile, .element-box, .invoice-w, .big-error-w, .activity-boxes-w .activity-box, .post-box, .projects-list .project-box, .order-box, .ecommerce-customer-info {
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  // box-shadow: 0px 2px 4px rgb(126 142 177 / 12%);
+}
+.activity-boxes-w .activity-box-w:after {
+  content: "";
+  display: block;
+  width: 20px;
+  background-color: #c0cadd;
+  top: 50%;
+  height: 1px;
+  left: 80px;
+  position: absolute;
+  z-index: 1;
 }

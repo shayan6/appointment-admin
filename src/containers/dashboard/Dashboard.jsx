@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Layout, Card, Divider } from "antd";
+import { Col, Row, Card, Divider } from "antd";
 import BreadCumb from "../../main/components/BreadCumb";
 import PaymentsChart from "./components/PaymentsChart";
 import KpisCharts from "./components/KpisCharts";
@@ -7,6 +7,8 @@ import ConversionsChart from "./components/ConversionsChart";
 import GadgesChart from "./components/GadgesChart";
 import HoverButtons from "./components/HoverButtons";
 import "./styles/dashboard.scss";
+import CustomersTable from "./components/CustomersTable";
+import RecentActivity from "./components/RecentActivity";
 
 export default function Dashboard() {
   return (
@@ -37,7 +39,7 @@ export default function Dashboard() {
             <Divider />
           </Col>
           <Col span={24}>
-            <Card>Table</Card>
+            <CustomersTable/>
           </Col>
         </Row>
       </Col>
@@ -52,7 +54,7 @@ export default function Dashboard() {
             <Divider />
           </Col>
           <Col span={24}>
-            <Card>Activity</Card>
+            <RecentActivity/>
           </Col>
         </Row>
       </Col>

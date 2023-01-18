@@ -1,9 +1,20 @@
-import { Layout, Row, Col, Card, Form, Input, Button, message, Typography } from "antd";
+import {
+  Layout,
+  Row,
+  Col,
+  Card,
+  Form,
+  Input,
+  Button,
+  message,
+  Typography,
+} from "antd";
 import { Switch } from "antd";
 import BreadCumb from "../../main/components/BreadCumb";
 import { useDispatch, useSelector } from "react-redux";
 import { setSettings } from "../../main/actions";
 import { useState } from "react";
+import PageHeader from "../../main/components/PageHeader";
 // import FailedRecordsTable from "./components/FailedRecordsTable";
 
 function Settings() {
@@ -58,7 +69,7 @@ function Settings() {
   return (
     <Row>
       <Col span={24}>
-        <BreadCumb path="Settings" />
+        <PageHeader title="Settings" />
       </Col>
       <Col span={24}>
         <Form
@@ -71,11 +82,6 @@ function Settings() {
           autoComplete="off"
         >
           <Row gutter={[18, 18]}>
-            <Col span={24}>
-              <Card>
-                <Typography.Text level={5}> Settings </Typography.Text>
-              </Card>
-            </Col>
             <Col span={24}>
               <Card>
                 <Row>

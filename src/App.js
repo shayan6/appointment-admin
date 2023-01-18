@@ -1,5 +1,5 @@
 import { ConfigProvider } from "antd";
-import "./index.scss";
+import "./main/styles/index.scss";
 import Layouts from "./main/components/Layouts";
 
 function App() {
