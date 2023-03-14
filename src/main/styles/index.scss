@@ -18,11 +18,15 @@ aside {
   padding-top: 1rem;
   border-right: 1px solid rgba(5, 5, 5, 0.06);
 }
-.site-page-header{
+.site-page-header {
   margin-bottom: 1rem;
   .ant-typography {
     margin: 0;
   }
+}
+.site-page-header .ant-card-body {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 .ant-layout-content {
   margin: $layoutMargin;

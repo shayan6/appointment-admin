@@ -15,6 +15,7 @@ import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import "./style.scss";
 
 function Appointments() {
   const baseUrl = useSelector((state) => state.common.url);
@@ -69,7 +70,7 @@ function Appointments() {
         <PageHeader title="Appointments" />
       </Col>
       <Col span={24}>
-        <Card>
+        <Card className="section">
           <Filters />
           <Table columns={columns} dataSource={dataSource} />
         </Card>
