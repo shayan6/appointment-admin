@@ -1,5 +1,4 @@
 import {
-  Layout,
   Row,
   Col,
   Card,
@@ -7,10 +6,8 @@ import {
   Input,
   Button,
   message,
-  Typography,
 } from "antd";
 import { Switch } from "antd";
-import BreadCumb from "../../main/components/BreadCumb";
 import { useDispatch, useSelector } from "react-redux";
 import { setSettings } from "../../main/actions";
 import { useState } from "react";
@@ -18,7 +15,6 @@ import PageHeader from "../../main/components/PageHeader";
 // import FailedRecordsTable from "./components/FailedRecordsTable";
 
 function Settings() {
-  const { Content } = Layout;
   const [form] = Form.useForm();
   const settings = useSelector((state) => state.common.settings);
   const dispatch = useDispatch();

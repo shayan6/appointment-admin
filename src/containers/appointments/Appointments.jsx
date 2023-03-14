@@ -1,15 +1,4 @@
-import {
-  Layout,
-  Row,
-  Col,
-  Card,
-  Form,
-  Input,
-  Button,
-  message,
-  Typography,
-  Table,
-} from "antd";
+import { Row, Col, Card, Table } from "antd";
 import PageHeader from "../../main/components/PageHeader";
 import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
@@ -62,7 +51,7 @@ function Appointments() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   return (
     <Row>
@@ -72,7 +61,7 @@ function Appointments() {
       <Col span={24}>
         <Card className="section">
           <Filters />
-          <Table columns={columns} dataSource={dataSource} />
+          <Table columns={columns} loading={!loading} dataSource={dataSource} />
         </Card>
       </Col>
     </Row>
