@@ -1,4 +1,21 @@
+.row-filters .ant-col .ant-space-item:nth-child(2),
+.row-filters .ant-space {
+  width: 100%;
+  height: 100%;
+}
+.row-filters .ant-space-item {
+  white-space: nowrap;
+}
+.row-filters {
+  padding-bottom: 20px;
+  .col-buttons {
+    display: flex;
+  }
+  .col-buttons .ant-space .ant-space-item {
+    height: fit-content;
+  }
+}
 .section .ant-table-tbody td.ant-table-cell,
-.section .ant-table-thead th.ant-table-cell  {
-    padding: 6px 6px;
+.section .ant-table-thead th.ant-table-cell {
+  padding: 6px 6px;
 }

@@ -12,12 +12,9 @@ function Appointments() {
   const [loading, setLoading] = useState(false);
   const columns = [
     {
-      title: "Appointment id",
+      title: "Id",
       dataIndex: "appointment_id",
-    },
-    {
-      title: "Date",
-      dataIndex: "date",
+      width: '10%'
     },
     {
       title: "Customer Name",
@@ -26,6 +23,10 @@ function Appointments() {
     {
       title: "Staff Name",
       dataIndex: "staff_name",
+    },
+    {
+      title: "Date",
+      dataIndex: "date",
     },
   ];
 

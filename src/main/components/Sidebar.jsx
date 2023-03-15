@@ -1,24 +1,12 @@
 import { Layout, Menu } from "antd";
 import {
   DashboardOutlined,
-  LinkOutlined,
+  EnvironmentOutlined,
   ReconciliationOutlined,
-  UserOutlined,
-  CodeSandboxOutlined,
-  FileDoneOutlined,
-  DeliveredProcedureOutlined,
-  DatabaseOutlined,
-  DollarCircleOutlined,
-  RedoOutlined,
-  FileTextOutlined,
-  FileProtectOutlined,
-  BugOutlined,
   SettingOutlined,
-  SyncOutlined,
-  RiseOutlined,
-  BookOutlined,
-  CloudDownloadOutlined,
-  CalendarOutlined
+  TeamOutlined,
+  ToolOutlined,
+  CalendarOutlined,
 } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -47,103 +35,42 @@ export default function Sidebar() {
       display: true,
     },
     {
-      name: "Connectors",
-      icon: <LinkOutlined />,
-      path: "Connectors",
+      name: "Locations",
+      icon: <EnvironmentOutlined />,
+      path: "Locations",
       display: true,
     },
     {
-      name: "Failed Records",
+      name: "Services",
       icon: <ReconciliationOutlined />,
-      path: "FailedRecords",
+      path: "Services",
       display: true,
     },
     {
-      name: "Synchronize Now",
-      icon: <SyncOutlined />,
+      name: "Staff",
+      icon: <TeamOutlined />,
       path: null,
       display: true,
-      children: [
-        {
-          name: "Sales Order Import",
-          icon: <BookOutlined />,
-          path: "SalesOrderImport",
-          display: true,
-        },
-      ],
-    },
-    {
-      name: "Selective Sync",
-      icon: <RiseOutlined />,
-      path: null,
-      display: true,
-      children: [
-        {
-          name: "Import Sales Order",
-          icon: <CloudDownloadOutlined />,
-          path: "SelectiveSyncImport",
-          display: true,
-        },
-      ],
-    },
-    {
-      name: "Inventory Adjustment",
-      icon: <CodeSandboxOutlined />,
-      path: "dummylink1",
-    },
-    {
-      name: "Item Fulfillments",
-      icon: <FileDoneOutlined />,
-      path: "dummylink2",
-    },
-    {
-      name: "Item Reciept",
-      icon: <DeliveredProcedureOutlined />,
-      path: "dummylink3",
-    },
-    {
-      name: "Master Data",
-      icon: <DatabaseOutlined />,
-      path: "dummylink4",
-    },
-    {
-      name: "Purchase Order",
-      icon: <DollarCircleOutlined />,
-      path: "dummylink5",
-    },
-    {
-      name: "Return Authorization",
-      icon: <RedoOutlined />,
-      path: "dummylink6",
-    },
-    {
-      name: "Sales Order",
-      icon: <FileTextOutlined />,
-      path: "dummylink7",
-    },
-    {
-      name: "Transfer Order As PO",
-      icon: <UserOutlined />,
-      path: "dummylink8",
-    },
-    {
-      name: "Transfer Order As SO",
-      icon: <FileProtectOutlined />,
-      path: "dummylink9",
-    },
-    {
-      name: "F3 Debugger",
-      icon: <BugOutlined />,
-      path: "Debugger",
-      display: settings?.showDebugger,
-      // external: true,
     },
     {
       name: "Settings",
       icon: <SettingOutlined />,
-      path: "Settings",
+      path: null,
       display: true,
-      // external: true,
+      children: [
+        {
+          name: "General",
+          icon: <ToolOutlined />,
+          path: "General",
+          display: true,
+        },
+        {
+          name: "Steps",
+          icon: <ToolOutlined />,
+          path: "Steps",
+          display: true,
+        },
+      ],
     },
   ];
 
