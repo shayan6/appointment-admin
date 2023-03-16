@@ -4,29 +4,29 @@ import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import "./style.scss";
+// import "./style.scss";
 
-function Appointments() {
+function Locations() {
   const baseUrl = useSelector((state) => state.common.url);
   const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
   const columns = [
     {
       title: "Id",
-      dataIndex: "appointment_id",
+      dataIndex: "location_id",
       width: "10%",
     },
     {
-      title: "Customer Name",
-      dataIndex: "customer_name",
+      title: "Location Name",
+      dataIndex: "location_name",
     },
     {
-      title: "Staff Name",
-      dataIndex: "staff_name",
+      title: "Location address",
+      dataIndex: "location_address",
     },
     {
-      title: "Date",
-      dataIndex: "date",
+      title: "Active",
+      dataIndex: "is_active",
     },
     {
       title: "Action",
@@ -46,10 +46,10 @@ function Appointments() {
     setLoading(true);
     try {
       const httpRequestData = {
-        url: `${baseUrl}/getAppointments`,
+        url: `${baseUrl}/getLocations`,
         method: "POST",
         postData: {
-          action: "getAppointments",
+          action: "getLocations",
           storeId: "1",
         },
       };
@@ -69,13 +69,13 @@ function Appointments() {
   return (
     <Row>
       <Col span={24}>
-        <PageHeader title="Appointments" />
+        <PageHeader title="Locations" />
       </Col>
       <Col span={24}>
         <Card className="section">
           <Filters />
           <Table
-            rowKey="appointment_id"
+            rowKey="location_id"
             columns={columns}
             loading={loading}
             dataSource={dataSource}
@@ -89,4 +89,4 @@ function Appointments() {
   );
 }
 
-export default Appointments;
+export default Locations;

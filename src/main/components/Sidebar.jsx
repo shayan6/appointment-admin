@@ -49,7 +49,7 @@ export default function Sidebar() {
     {
       name: "Staff",
       icon: <TeamOutlined />,
-      path: null,
+      path: "Staff",
       display: true,
     },
     {

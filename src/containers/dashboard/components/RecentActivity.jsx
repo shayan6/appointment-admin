@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from "../../../../src/images/avatar.svg"
 
 export default function RecentActivity() {
   return (
@@ -7,7 +8,7 @@ export default function RecentActivity() {
         <div class="activity-time">10 Min</div>
         <div class="activity-box">
           <div class="activity-avatar">
-            <img alt="" src="https://avatars.githubusercontent.com/u/42208796?v=4" />
+            <img alt="" src={avatar} />
           </div>
           <div class="activity-info">
             <div class="activity-role">John Mayers</div>
@@ -19,7 +20,7 @@ export default function RecentActivity() {
         <div class="activity-time">2 Hours</div>
         <div class="activity-box">
           <div class="activity-avatar">
-            <img alt="" src="https://avatars.githubusercontent.com/u/42208796?v=4" />
+            <img alt="" src={avatar} />
           </div>
           <div class="activity-info">
             <div class="activity-role">Ben Gossman</div>
@@ -31,7 +32,7 @@ export default function RecentActivity() {
         <div class="activity-time">5 Hours</div>
         <div class="activity-box">
           <div class="activity-avatar">
-            <img alt="" src="https://avatars.githubusercontent.com/u/42208796?v=4" />
+            <img alt="" src={avatar} />
           </div>
           <div class="activity-info">
             <div class="activity-role">Phil Nokorin</div>
@@ -43,7 +44,7 @@ export default function RecentActivity() {
         <div class="activity-time">2 Days</div>
         <div class="activity-box">
           <div class="activity-avatar">
-            <img alt="" src="https://avatars.githubusercontent.com/u/42208796?v=4" />
+            <img alt="" src={avatar} />
           </div>
           <div class="activity-info">
             <div class="activity-role">Jenny Miksa</div>

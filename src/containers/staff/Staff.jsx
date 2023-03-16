@@ -4,29 +4,38 @@ import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import "./style.scss";
+// import "./style.scss";
 
-function Appointments() {
+function Staff() {
   const baseUrl = useSelector((state) => state.common.url);
   const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
   const columns = [
     {
       title: "Id",
-      dataIndex: "appointment_id",
+      dataIndex: "staff_id",
       width: "10%",
     },
     {
-      title: "Customer Name",
-      dataIndex: "customer_name",
+      title: "First name",
+      dataIndex: "first_name",
     },
     {
-      title: "Staff Name",
-      dataIndex: "staff_name",
+      title: "Last name",
+      dataIndex: "last_name",
     },
     {
-      title: "Date",
-      dataIndex: "date",
+      title: "Email",
+      dataIndex: "email_address",
+    },
+    {
+      title: "Mobile number",
+      dataIndex: "mobile_number",
+    },
+    {
+      title: "Active",
+      dataIndex: "is_active",
+      render: is_active => is_active ? 'Yes' : 'No'
     },
     {
       title: "Action",
@@ -46,10 +55,10 @@ function Appointments() {
     setLoading(true);
     try {
       const httpRequestData = {
-        url: `${baseUrl}/getAppointments`,
+        url: `${baseUrl}/getStaff`,
         method: "POST",
         postData: {
-          action: "getAppointments",
+          action: "getStaff",
           storeId: "1",
         },
       };
@@ -69,13 +78,13 @@ function Appointments() {
   return (
     <Row>
       <Col span={24}>
-        <PageHeader title="Appointments" />
+        <PageHeader title="Staff" />
       </Col>
       <Col span={24}>
         <Card className="section">
           <Filters />
           <Table
-            rowKey="appointment_id"
+            rowKey="staff_id"
             columns={columns}
             loading={loading}
             dataSource={dataSource}
@@ -89,4 +98,4 @@ function Appointments() {
   );
 }
 
-export default Appointments;
+export default Staff;
