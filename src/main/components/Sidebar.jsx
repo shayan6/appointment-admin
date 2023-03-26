@@ -61,7 +61,7 @@ export default function Sidebar() {
         {
           name: "General",
           icon: <ToolOutlined />,
-          path: "General",
+          path: "Settings",
           display: true,
         },
         {

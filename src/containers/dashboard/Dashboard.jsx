@@ -19,7 +19,7 @@ export default function Dashboard() {
       <Col span={16}>
         <Row>
           <Col span={24}>
-            <Card>Filters</Card>
+            <Card>Filters, datetime, location</Card>
           </Col>
         </Row>
         <HoverButtons />

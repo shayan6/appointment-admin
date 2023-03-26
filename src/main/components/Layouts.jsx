@@ -10,6 +10,7 @@ import Appointments from "../../containers/appointments/Appointments";
 import Locations from "../../containers/locations/Locations";
 import Services from "../../containers/services/Services";
 import Staff from "../../containers/staff/Staff";
+import Steps from "../../containers/steps/Steps";
 // import PageLoader from "./PageLoader";
 
 export default function Layouts() {
@@ -30,6 +31,7 @@ export default function Layouts() {
               <Route path="/Services" element={<Services />} />
               <Route path="/Staff" element={<Staff />} />
               <Route path="/Settings" element={<Settings />} />
+              <Route path="/Steps" element={<Steps />} />
             </Routes>
             <Row gutter={18}>
               <Col span={24}>
