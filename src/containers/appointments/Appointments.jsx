@@ -35,8 +35,8 @@ function Appointments() {
       render: () => {
         return (
           <Space>
-            <Typography.Text>edit</Typography.Text>{" "}
-            <Typography.Text>delete</Typography.Text>
+            <Typography.Link>edit</Typography.Link>{" "}
+            <Typography.Link>delete</Typography.Link>
           </Space>
         );
       },

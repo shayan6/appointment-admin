@@ -45,7 +45,7 @@ export default function Steps() {
       title: "Status",
       dataIndex: "is_active",
       width: "10%",
-      render: (is_active) => <Switch checked={Boolean(is_active)} />,
+      render: (is_active) => <Switch checked={Boolean(+is_active)} />,
     },
   ];
 
@@ -81,9 +81,9 @@ export default function Steps() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const url = `${baseUrl}/getFrontEndPanels`;
+      const url = `${baseUrl}/getPanelSettings`;
       const params = {
-        action: "getFrontEndPanels",
+        action: "getPanelSettings",
         storeId: "1",
       };
       const response = await httpPost(url, params);
