@@ -1,10 +1,10 @@
-import { Row, Col, Card, Table, Space } from "antd";
+import { Row, Col, Card, Table, Space, Typography } from "antd";
 import PageHeader from "../../main/components/PageHeader";
 import Filters from "./components/Filters";
-import sendRequest from "../../api_helpers/requests/sendRequest";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "./style.scss";
+import { getAppointments } from "../../api_helpers/microservices/appointments";
 
 function Appointments() {
   const baseUrl = useSelector((state) => state.common.url);
@@ -35,35 +35,24 @@ function Appointments() {
       render: () => {
         return (
           <Space>
-            <a>edit</a> <a>delete</a>
+            <Typography.Text>edit</Typography.Text>{" "}
+            <Typography.Text>delete</Typography.Text>
           </Space>
         );
       },
     },
   ];
 
-  const fetchData = async () => {
+  async function loadAppointments() {
     setLoading(true);
-    try {
-      const httpRequestData = {
-        url: `${baseUrl}/getAppointments`,
-        method: "POST",
-        postData: {
-          action: "getAppointments",
-          storeId: "1",
-        },
-      };
-      const response = await sendRequest(httpRequestData);
-      setDataSource(response);
-      setLoading(false);
-    } catch (e) {
-      setDataSource([]);
-      setLoading(false);
-    }
-  };
+    const response = await getAppointments(baseUrl);
+    setDataSource(response || []);
+    setLoading(false);
+  }
 
   useEffect(() => {
-    fetchData();
+    loadAppointments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

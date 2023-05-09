@@ -1,7 +1,6 @@
 import { MenuOutlined } from "@ant-design/icons";
-import { Card, Col, Row, Switch, Table } from "antd";
+import { Button, Card, Col, Row, Switch, Table } from "antd";
 import { arrayMoveImmutable } from "array-move";
-import sendRequest from "../../api_helpers/requests/sendRequest";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import {
@@ -11,6 +10,7 @@ import {
 } from "react-sortable-hoc";
 import PageHeader from "../../main/components/PageHeader";
 import "./style.scss";
+import httpPost from "../../api_helpers/requests/httpPost";
 
 const DragHandle = SortableHandle(() => (
   <MenuOutlined
@@ -81,15 +81,12 @@ export default function Steps() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const httpRequestData = {
-        url: `${baseUrl}/getFrontEndPanels`,
-        method: "POST",
-        postData: {
-          action: "getFrontEndPanels",
-          storeId: "1",
-        },
+      const url = `${baseUrl}/getFrontEndPanels`;
+      const params = {
+        action: "getFrontEndPanels",
+        storeId: "1",
       };
-      const response = await sendRequest(httpRequestData);
+      const response = await httpPost(url, params);
       setDataSource(response.map((el, i) => ({ ...el, key: el.id, index: i })));
       setLoading(false);
     } catch (e) {
@@ -101,6 +98,10 @@ export default function Steps() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    console.log(dataSource);
+  }, [dataSource]);
 
   return (
     <Row>
@@ -122,6 +123,10 @@ export default function Steps() {
               },
             }}
           />
+          <br />
+          <Button type="primary" htmlType="submit">
+            Save
+          </Button>
         </Card>
       </Col>
     </Row>
