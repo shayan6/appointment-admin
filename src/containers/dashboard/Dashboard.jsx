@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Card, Divider } from "antd";
+import { Col, Row, Card, Divider, Space, Typography, Input, DatePicker } from "antd";
 import BreadCumb from "../../main/components/BreadCumb";
 import PaymentsChart from "./components/PaymentsChart";
 import KpisCharts from "./components/KpisCharts";
@@ -17,11 +17,28 @@ export default function Dashboard() {
         <BreadCumb path="Dashboard"></BreadCumb>
       </Col>
       <Col span={16}>
-        <Row>
-          <Col span={24}>
-            <Card>Filters, datetime, location</Card>
-          </Col>
-        </Row>
+        <Card>
+          <Row gutter={[15, 15]} className="row-filters">
+            <Col span={12}>
+              <Space>
+                <Typography.Text>Date</Typography.Text>
+                <DatePicker.RangePicker showTime />
+              </Space>
+            </Col>
+            <Col span={6}>
+              <Space>
+                <Typography.Text>Location</Typography.Text>
+                <Input size="middle" placeholder="Location" />
+              </Space>
+            </Col>
+            <Col span={6}>
+              <Space>
+                <Typography.Text>Service</Typography.Text>
+                <Input size="middle" placeholder="Service" />
+              </Space>
+            </Col>
+          </Row>
+        </Card>
         <HoverButtons />
         <Row gutter={16}>
           <Col span={24}>
@@ -39,7 +56,7 @@ export default function Dashboard() {
             <Divider />
           </Col>
           <Col span={24}>
-            <CustomersTable/>
+            <CustomersTable />
           </Col>
         </Row>
       </Col>
@@ -54,7 +71,7 @@ export default function Dashboard() {
             <Divider />
           </Col>
           <Col span={24}>
-            <RecentActivity/>
+            <RecentActivity />
           </Col>
         </Row>
       </Col>

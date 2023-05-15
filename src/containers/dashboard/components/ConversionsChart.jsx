@@ -1,21 +1,21 @@
 import React from "react";
 import { Funnel } from "@ant-design/plots";
-import { Card, Col, Divider, Row } from "antd";
+import { Card, Col, Row } from "antd";
 
 export default function ConversionsChart() {
   const data = [
     {
-      stage: "简历筛选",
+      stage: "Appointments",
       number: 253,
       company: "Yesterday",
     },
     {
-      stage: "初试人数",
+      stage: "Payments",
       number: 151,
       company: "Yesterday",
     },
     {
-      stage: "复试人数",
+      stage: "Visited",
       number: 113,
       company: "Yesterday",
     },
@@ -30,17 +30,17 @@ export default function ConversionsChart() {
       company: "Yesterday",
     },
     {
-      stage: "简历筛选",
+      stage: "Appointments",
       number: 303,
       company: "Today",
     },
     {
-      stage: "初试人数",
+      stage: "Payments",
       number: 251,
       company: "Today",
     },
     {
-      stage: "复试人数",
+      stage: "Visited",
       number: 153,
       company: "Today",
     },
@@ -68,7 +68,7 @@ export default function ConversionsChart() {
       },
       pv: {
         alias: "人数",
-        formatter: (v) => `${v}次`,
+        formatter: (v) => `${v}`,
       },
     },
     tooltip: {

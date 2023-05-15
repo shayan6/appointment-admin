@@ -19,8 +19,8 @@ export default function HoverButtons() {
             </Col>
             <Col span={12} className="text-right">
               <Space direction="vertical" size={6}>
-                <Text className="value">1,632</Text>
-                <Text className="label">Users</Text>
+                <Text className="value">1,622</Text>
+                <Text className="label">Appointments</Text>
               </Space>
             </Col>
           </Row>
@@ -53,8 +53,8 @@ export default function HoverButtons() {
             </Col>
             <Col span={12} className="text-right">
               <Space direction="vertical" size={6}>
-                <Text className="value">1,632</Text>
-                <Text className="label">Users</Text>
+                <Text className="value">1,132</Text>
+                <Text className="label">Visitors</Text>
               </Space>
             </Col>
           </Row>
@@ -70,8 +70,8 @@ export default function HoverButtons() {
             </Col>
             <Col span={12} className="text-right">
               <Space direction="vertical" size={6}>
-                <Text className="value">1,632</Text>
-                <Text className="label">Users</Text>
+                <Text className="value">1,032</Text>
+                <Text className="label">Payments</Text>
               </Space>
             </Col>
           </Row>

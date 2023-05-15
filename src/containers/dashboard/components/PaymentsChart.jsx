@@ -32,27 +32,27 @@ export default function PaymentsChart() {
 
   const data = [
     {
-      type: "分类一",
+      type: "Cash",
       value: 27,
     },
     {
-      type: "分类二",
+      type: "Bank",
       value: 25,
     },
     {
-      type: "分类三",
+      type: "Credit card",
       value: 18,
     },
     {
-      type: "分类四",
+      type: "Wise",
       value: 15,
     },
     {
-      type: "分类五",
+      type: "LHV",
       value: 10,
     },
     {
-      type: "其他",
+      type: "Revolute",
       value: 5,
     },
   ];
@@ -85,7 +85,7 @@ export default function PaymentsChart() {
         customHtml: (container, view, datum) => {
           const { width, height } = container.getBoundingClientRect();
           const d = Math.sqrt(Math.pow(width / 21, 2) + Math.pow(height / 2, 2));
-          const text = datum ? datum.type : "总计";
+          const text = datum ? datum.type : "Total";
           return renderStatistic(d, text, {
             fontSize: 28,
           });
@@ -99,8 +99,8 @@ export default function PaymentsChart() {
         customHtml: (container, view, datum, data) => {
           const { width } = container.getBoundingClientRect();
           const text = datum
-            ? `¥ ${datum.value}`
-            : `¥ ${data.reduce((r, d) => r + d.value, 0)}`;
+            ? `$ ${datum.value}`
+            : `$ ${data.reduce((r, d) => r + d.value, 0)}`;
           return renderStatistic(width, text, {
             fontSize: 32,
           });

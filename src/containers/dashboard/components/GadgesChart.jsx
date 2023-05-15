@@ -1,21 +1,20 @@
 import React from "react";
 import { Gauge, G2 } from "@ant-design/plots";
-import { Card, Col, Divider, Row, Space, Typography } from "antd";
+import { Card, Col, Divider, Row, Typography } from "antd";
 
 export default function GadgesChart() {
   const { registerShape, Util } = G2; // 自定义 Shape 部分
 
   registerShape("point", "custom-gauge-indicator", {
     draw(cfg, container) {
-      // 使用 customInfo 传递参数
       const { indicator, defaultColor } = cfg.customInfo;
       const { pointer } = indicator;
-      const group = container.addGroup(); // 获取极坐标系下画布中心点
+      const group = container.addGroup();
 
       const center = this.parsePoint({
         x: 0,
         y: 0,
-      }); // 绘制指针
+      });
 
       if (pointer) {
         const { startAngle, endAngle } = Util.getAngle(cfg, this.coordinate);
@@ -86,16 +85,16 @@ export default function GadgesChart() {
           <Divider />
           <Row>
             <Col span={12}>
-              <Typography.Text>Label</Typography.Text>
+              <Typography.Text>Appointments</Typography.Text>
             </Col>
             <Col span={12} className="text-right">
               <Typography.Text>1,632</Typography.Text>
             </Col>
             <Col span={12}>
-              <Typography.Text>Label</Typography.Text>
+              <Typography.Text>Visitors</Typography.Text>
             </Col>
             <Col span={12} className="text-right">
-              <Typography.Text>1,632</Typography.Text>
+              <Typography.Text>1,132</Typography.Text>
             </Col>
           </Row>
         </Card>
