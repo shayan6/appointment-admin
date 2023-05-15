@@ -10,7 +10,10 @@ import {
 } from "react-sortable-hoc";
 import PageHeader from "../../main/components/PageHeader";
 import "./style.scss";
-import httpPost from "../../api_helpers/requests/httpPost";
+import {
+  getPanelSettings,
+  saveFrontEndPanels,
+} from "../../api_helpers/microservices/settings";
 
 const DragHandle = SortableHandle(() => (
   <MenuOutlined
@@ -57,6 +60,12 @@ export default function Steps() {
         newIndex
       ).filter((el) => !!el);
       console.log("Sorted items: ", newData);
+      savePanelSettings(
+        newData.map((el) => ({
+          id: el.id,
+          step_name: el.step_name,
+        }))
+      );
       setDataSource(newData);
     }
   };
@@ -78,25 +87,23 @@ export default function Steps() {
     return <SortableItem index={index} {...restProps} />;
   };
 
-  const fetchData = async () => {
+  const savePanelSettings = async (params) => {
     setLoading(true);
-    try {
-      const url = `${baseUrl}/getPanelSettings`;
-      const params = {
-        action: "getPanelSettings",
-        storeId: "1",
-      };
-      const response = await httpPost(url, params);
-      setDataSource(response.map((el, i) => ({ ...el, key: el.id, index: i })));
-      setLoading(false);
-    } catch (e) {
-      setDataSource([]);
-      setLoading(false);
-    }
+    const response = await saveFrontEndPanels(baseUrl, params);
+    alert(response);
+    setLoading(false);
+  };
+
+  const loadPanelSettings = async () => {
+    setLoading(true);
+    const response = await getPanelSettings(baseUrl);
+    setDataSource(response.map((el, i) => ({ ...el, key: el.id, index: i })));
+    setLoading(false);
   };
 
   useEffect(() => {
-    fetchData();
+    loadPanelSettings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
