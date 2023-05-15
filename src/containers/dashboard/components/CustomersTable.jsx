@@ -120,7 +120,7 @@ export default function CustomersTable() {
             <td class="nowrap">
               <span class="status-pill smaller yellow"></span>
               <span>
-                <Tag color="red">Pending</Tag>
+                <Tag color="orange">Pending</Tag>
               </span>
             </td>
             <td class="row-actions">
@@ -159,7 +159,7 @@ export default function CustomersTable() {
             <td class="nowrap">
               <span class="status-pill smaller yellow"></span>
               <span>
-                <Tag color="red">Pending</Tag>
+                <Tag color="orange">Pending</Tag>
               </span>
             </td>
             <td class="row-actions">
@@ -237,7 +237,7 @@ export default function CustomersTable() {
             <td class="nowrap">
               <span class="status-pill smaller yellow"></span>
               <span>
-                <Tag color="red">Pending</Tag>
+                <Tag color="orange">Pending</Tag>
               </span>
             </td>
             <td class="row-actions">

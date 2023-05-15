@@ -1,5 +1,6 @@
 import { Row, Col, Card, Table, Space } from "antd";
 import PageHeader from "../../main/components/PageHeader";
+import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
 import { useEffect, useState } from "react";
@@ -17,30 +18,46 @@ function Services() {
       width: "10%",
     },
     {
-      title: "service Name",
+      title: "Service Name",
       dataIndex: "service_name",
     },
     {
-      title: "service price",
+      title: "Service price",
       dataIndex: "service_price",
     },
     {
-      title: "service duration",
+      title: "Service duration",
       dataIndex: "service_duration",
     },
     {
       title: "Hide price",
       dataIndex: "hide_price",
-      render: hide_price => hide_price ? 'Yes' : 'No'
+      render: (hide_price) =>
+        +hide_price ? (
+          <CheckOutlined style={{ color: "green" }} />
+        ) : (
+          <CloseOutlined style={{ color: "red" }} />
+        ),
     },
     {
       title: "Hide duration",
       dataIndex: "hide_duration",
-      render: hide_duration => hide_duration ? 'Yes' : 'No'
+      render: (hide_duration) =>
+        +hide_duration ? (
+          <CheckOutlined style={{ color: "green" }} />
+        ) : (
+          <CloseOutlined style={{ color: "red" }} />
+        ),
     },
     {
       title: "Active",
       dataIndex: "is_active",
+      render: (is_active) =>
+        +is_active ? (
+          <CheckOutlined style={{ color: "green" }} />
+        ) : (
+          <CloseOutlined style={{ color: "red" }} />
+        ),
     },
     {
       title: "Action",

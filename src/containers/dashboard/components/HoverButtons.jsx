@@ -1,6 +1,11 @@
 import { Card, Col, Divider, Row, Space, Typography } from "antd";
 import React from "react";
-import { UserOutlined } from "@ant-design/icons";
+import {
+  UserOutlined,
+  CalendarOutlined,
+  UserAddOutlined,
+  DollarOutlined,
+} from "@ant-design/icons";
 
 export default function HoverButtons() {
   const { Text } = Typography;
@@ -14,7 +19,7 @@ export default function HoverButtons() {
           <Row>
             <Col span={12}>
               <span className="iconCircle">
-                <UserOutlined />
+                <CalendarOutlined />
               </span>
             </Col>
             <Col span={12} className="text-right">
@@ -48,7 +53,7 @@ export default function HoverButtons() {
           <Row>
             <Col span={12}>
               <span className="iconCircle">
-                <UserOutlined />
+                <UserAddOutlined />
               </span>
             </Col>
             <Col span={12} className="text-right">
@@ -65,7 +70,7 @@ export default function HoverButtons() {
           <Row>
             <Col span={12}>
               <span className="iconCircle">
-                <UserOutlined />
+                <DollarOutlined />
               </span>
             </Col>
             <Col span={12} className="text-right">

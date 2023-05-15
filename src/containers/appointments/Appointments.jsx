@@ -1,4 +1,4 @@
-import { Row, Col, Card, Table, Space, Typography } from "antd";
+import { Row, Col, Card, Table, Space, Typography, Tag } from "antd";
 import PageHeader from "../../main/components/PageHeader";
 import Filters from "./components/Filters";
 import { useEffect, useState } from "react";
@@ -17,6 +17,10 @@ function Appointments() {
       width: "10%",
     },
     {
+      title: "Service name",
+      dataIndex: "service_name",
+    },
+    {
       title: "Customer Name",
       dataIndex: "customer_name",
     },
@@ -28,6 +32,20 @@ function Appointments() {
       title: "Date",
       dataIndex: "date",
     },
+    {
+      title: "Status",
+      dataIndex: "status",
+      render: (status) => <Tag color="orange">{status?.toUpperCase()}</Tag>
+    },  
+    {
+      title: "Service duration",
+      dataIndex: "service_duration",
+    },  
+    {
+      title: "Service price",
+      dataIndex: "currency_symbol",
+      render: (currency_symbol) => "0.00 " + currency_symbol
+    },       
     {
       title: "Action",
       fixed: "right",
