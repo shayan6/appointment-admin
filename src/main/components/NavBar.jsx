@@ -6,9 +6,9 @@ const { Header } = Layout;
 export default function NavBar() {
   const { settings } = useSelector((state) => state.common);
   const theme = settings.theme ? settings.theme : "light";
-  const items = ["1", "2", "3"].map((key) => ({
+  const items = ["Profile", "Settings", "Logout"].map((key) => ({
     key,
-    label: `nav ${key}`,
+    label: `${key}`,
   }));
 
   return (
@@ -27,7 +27,7 @@ export default function NavBar() {
           <Menu
             theme={theme}
             mode="horizontal"
-            defaultSelectedKeys={["2"]}
+            defaultSelectedKeys={["Settings"]}
             items={items}
           />
         </Col>

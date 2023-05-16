@@ -33,6 +33,9 @@ aside {
   padding: $layoutPadding;
   min-height: 90vh !important;
 }
+.ant-layout-sider-trigger {
+  display: none;
+}
 .logo img {
   height: 32px;
   margin-right: 12px;

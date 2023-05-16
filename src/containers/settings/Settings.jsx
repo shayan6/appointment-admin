@@ -6,6 +6,7 @@ import {
   Input,
   Button,
   message,
+  Typography,
 } from "antd";
 import { Switch } from "antd";
 import { useDispatch, useSelector } from "react-redux";
@@ -84,7 +85,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="showDebugger">
                       <label>
-                        <h1>Enable Debugger</h1>
+                        <Typography.Title level={5}>Enable Debugger</Typography.Title>
                         <Switch
                           defaultChecked={settings?.showDebugger}
                           onChange={handleDebugggerChange}
@@ -95,7 +96,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="theme">
                       <label>
-                        <h1>Dark Sidebar</h1>
+                        <Typography.Title level={5}>Dark Sidebar</Typography.Title>
                         <Switch
                           defaultChecked={settings?.theme === "dark"}
                           onChange={handleThemeChange}
@@ -106,7 +107,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorPrimary">
                       <label>
-                        <h1>Primary</h1>
+                        <Typography.Title level={5}>Primary</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorPrimary}
@@ -120,7 +121,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorSecondary">
                       <label>
-                        <h1>Secondary</h1>
+                        <Typography.Title level={5}>Secondary</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorSecondary}
@@ -134,7 +135,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorWarning">
                       <label>
-                        <h1>Warning</h1>
+                        <Typography.Title level={5}>Warning</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorWarning}
@@ -148,7 +149,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorSuccess">
                       <label>
-                        <h1>Success</h1>
+                        <Typography.Title level={5}>Success</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorSuccess}
@@ -162,7 +163,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorDanger">
                       <label>
-                        <h1>Danger</h1>
+                        <Typography.Title level={5}>Danger</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorDanger}
@@ -176,7 +177,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorYellow">
                       <label>
-                        <h1>Yellow</h1>
+                        <Typography.Title level={5}>Yellow</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorYellow}
@@ -190,7 +191,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorPurple">
                       <label>
-                        <h1>Purple</h1>
+                        <Typography.Title level={5}>Purple</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorPurple}
@@ -204,7 +205,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorPink">
                       <label>
-                        <h1>Pink</h1>
+                        <Typography.Title level={5}>Pink</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorPink}
@@ -218,7 +219,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorBlack">
                       <label>
-                        <h1>Black</h1>
+                        <Typography.Title level={5}>Black</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorBlack}
@@ -232,7 +233,7 @@ function Settings() {
                   <Col span={4}>
                     <Form.Item name="colorWhite">
                       <label>
-                        <h1>White</h1>
+                        <Typography.Title level={5}>White</Typography.Title>
                         <Input
                           type={"color"}
                           defaultValue={settings?.color?.colorWhite}

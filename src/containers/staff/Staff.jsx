@@ -2,6 +2,7 @@ import { Row, Col, Card, Table, Space } from "antd";
 import PageHeader from "../../main/components/PageHeader";
 import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
+import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 // import "./style.scss";
@@ -35,7 +36,12 @@ function Staff() {
     {
       title: "Active",
       dataIndex: "is_active",
-      render: is_active => is_active ? 'Yes' : 'No'
+      render: (is_active) =>
+        +is_active ? (
+          <CheckOutlined style={{ color: "green" }} />
+        ) : (
+          <CloseOutlined style={{ color: "red" }} />
+        ),
     },
     {
       title: "Action",

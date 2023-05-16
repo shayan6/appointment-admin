@@ -48,7 +48,12 @@ export default function Steps() {
       title: "Status",
       dataIndex: "is_active",
       width: "10%",
-      render: (is_active) => <Switch checked={Boolean(+is_active)} />,
+      render: (is_active, { id }) => (
+        <Switch
+          checked={is_active}
+          onChange={(check) => onSwitchStatus(check, id)}
+        />
+      ),
     },
   ];
 
@@ -60,15 +65,10 @@ export default function Steps() {
         newIndex
       ).filter((el) => !!el);
       console.log("Sorted items: ", newData);
-      savePanelSettings(
-        newData.map((el) => ({
-          id: el.id,
-          step_name: el.step_name,
-        }))
-      );
       setDataSource(newData);
     }
   };
+
   const DraggableContainer = (props) => (
     <SortableBody
       useDragHandle
@@ -87,17 +87,43 @@ export default function Steps() {
     return <SortableItem index={index} {...restProps} />;
   };
 
+  function onSwitchStatus(check, id) {
+    console.log(check, id);
+    setDataSource(
+      dataSource.map((el) => ({
+        ...el,
+        is_active: +id === +el.id ? check : el.is_active,
+      }))
+    );
+  }
+
+  function handleOnSave() {
+    savePanelSettings(
+      dataSource.map((el, index) => ({
+        id: el.id,
+        is_active: el.is_active,
+        priority: index + 1,
+      }))
+    );
+  }
+
   const savePanelSettings = async (params) => {
     setLoading(true);
-    const response = await saveFrontEndPanels(baseUrl, params);
-    alert(response);
+    await saveFrontEndPanels(baseUrl, params);
     setLoading(false);
   };
 
   const loadPanelSettings = async () => {
     setLoading(true);
     const response = await getPanelSettings(baseUrl);
-    setDataSource(response.map((el, i) => ({ ...el, key: el.id, index: i })));
+    setDataSource(
+      response.map((el, i) => ({
+        ...el,
+        key: el.id,
+        index: i,
+        is_active: Boolean(+el.is_active),
+      }))
+    );
     setLoading(false);
   };
 
@@ -105,10 +131,6 @@ export default function Steps() {
     loadPanelSettings();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  useEffect(() => {
-    console.log(dataSource);
-  }, [dataSource]);
 
   return (
     <Row>
@@ -131,7 +153,7 @@ export default function Steps() {
             }}
           />
           <br />
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" onClick={handleOnSave}>
             Save
           </Button>
         </Card>
