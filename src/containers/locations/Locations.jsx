@@ -1,4 +1,4 @@
-import { Row, Col, Card, Table, Space } from "antd";
+import { Row, Col, Card, Table, Space, Image } from "antd";
 import PageHeader from "../../main/components/PageHeader";
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import Filters from "./components/Filters";
@@ -13,9 +13,19 @@ function Locations() {
   const [loading, setLoading] = useState(false);
   const columns = [
     {
-      title: "Id",
-      dataIndex: "location_id",
+      title: "Image",
+      dataIndex: "location_image_name",
       width: "10%",
+      render: (location_image_name) => {
+        try {
+          const src = require(`../../images/locations/${location_image_name}`);
+          return <Image width={25} src={src} preview={{ src }} />;
+        } catch (err) {
+          //Do whatever you want when the image failed to load here
+          const src = require(`../../images/locations/no_image.png`);
+          return <Image width={200} src={src} preview={{ src }} />;
+        }
+      },
     },
     {
       title: "Location name",

@@ -1,11 +1,10 @@
-import { Row, Col, Card, Table, Space } from "antd";
+import { Row, Col, Card, Table, Space, Image } from "antd";
 import PageHeader from "../../main/components/PageHeader";
 import Filters from "./components/Filters";
 import sendRequest from "../../api_helpers/requests/sendRequest";
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-// import "./style.scss";
 
 function Staff() {
   const baseUrl = useSelector((state) => state.common.url);
@@ -13,9 +12,19 @@ function Staff() {
   const [loading, setLoading] = useState(false);
   const columns = [
     {
-      title: "Id",
-      dataIndex: "staff_id",
+      title: "Image",
+      dataIndex: "image_file_name",
       width: "10%",
+      render: (image_file_name) => {
+        try {
+          const src = require(`../../images/staff/${image_file_name}`);
+          return <Image width={25} src={src} preview={{ src }} />;
+        } catch (err) {
+          //Do whatever you want when the image failed to load here
+          const src = require(`../../images/staff/no_image.png`);
+          return <Image width={25} src={src} preview={{ src }} />;
+        }
+      },
     },
     {
       title: "First name",
