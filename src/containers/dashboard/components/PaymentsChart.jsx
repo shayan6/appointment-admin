@@ -33,27 +33,27 @@ export default function PaymentsChart() {
   const data = [
     {
       type: "Cash",
-      value: 27,
+      value: 270,
     },
     {
       type: "Bank",
-      value: 25,
+      value: 250,
     },
     {
       type: "Credit card",
-      value: 18,
+      value: 180,
     },
     {
       type: "Wise",
-      value: 15,
+      value: 150,
     },
     {
       type: "LHV",
-      value: 10,
+      value: 100,
     },
     {
       type: "Revolute",
-      value: 5,
+      value: 500,
     },
   ];
   const config = {

@@ -1,5 +1,5 @@
 import { MenuOutlined } from "@ant-design/icons";
-import { Button, Card, Col, Row, Switch, Table } from "antd";
+import { Button, Card, Col, Row, Switch, Table, notification } from "antd";
 import { arrayMoveImmutable } from "array-move";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -110,6 +110,9 @@ export default function Steps() {
   const savePanelSettings = async (params) => {
     setLoading(true);
     await saveFrontEndPanels(baseUrl, params);
+    notification.success({
+      message: "Saved! Changes are made successfully",
+    });
     setLoading(false);
   };
 

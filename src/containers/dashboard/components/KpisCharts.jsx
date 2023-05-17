@@ -7,52 +7,52 @@ export default function KpisCharts() {
     {
       time: "2019-03",
       value: 350,
-      type: "uv",
+      type: "Appintments",
     },
     {
       time: "2019-04",
       value: 900,
-      type: "uv",
+      type: "Appintments",
     },
     {
       time: "2019-05",
       value: 300,
-      type: "uv",
+      type: "Appintments",
     },
     {
       time: "2019-06",
       value: 450,
-      type: "uv",
+      type: "Appintments",
     },
     {
       time: "2019-07",
       value: 470,
-      type: "uv",
+      type: "Appintments",
     },
     {
       time: "2019-03",
       value: 220,
-      type: "bill",
+      type: "Payments",
     },
     {
       time: "2019-04",
       value: 300,
-      type: "bill",
+      type: "Payments",
     },
     {
       time: "2019-05",
       value: 250,
-      type: "bill",
+      type: "Payments",
     },
     {
       time: "2019-06",
       value: 220,
-      type: "bill",
+      type: "Payments",
     },
     {
       time: "2019-07",
       value: 362,
-      type: "bill",
+      type: "Payments",
     },
   ];
   const transformData = [
