@@ -1,6 +1,6 @@
 import React from "react";
 import { Funnel } from "@ant-design/plots";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Divider, Row } from "antd";
 
 export default function ConversionsChart() {
   const data = [
@@ -83,10 +83,13 @@ export default function ConversionsChart() {
   return (
     <Row>
       <Col span={24}>
+        <Divider orientation="left" orientationMargin="0%">
+          Conversion
+        </Divider>
         <Card>
           <Funnel {...config} />
         </Card>
       </Col>
     </Row>
   );
-};
+}

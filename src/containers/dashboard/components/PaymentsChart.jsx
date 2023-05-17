@@ -123,9 +123,9 @@ export default function PaymentsChart() {
   return (
     <Row>
       <Col span={24}>
-        <Divider />
-      </Col>
-      <Col span={24}>
+        <Divider orientation="left" orientationMargin="0%">
+          Payments
+        </Divider>
         <Card>
           <Pie {...config} />
         </Card>
