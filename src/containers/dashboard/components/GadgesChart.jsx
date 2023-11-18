@@ -1,6 +1,6 @@
 import React from "react";
 import { Gauge, G2 } from "@ant-design/plots";
-import { Card, Col, Divider, Row, Typography } from "antd";
+import { Card, Col, Divider, Row, Tag, Typography } from "antd";
 
 export default function GadgesChart() {
   const { registerShape, Util } = G2; // 自定义 Shape 部分
@@ -85,16 +85,16 @@ export default function GadgesChart() {
           <Divider />
           <Row>
             <Col span={12}>
-              <Typography.Text>Appointments</Typography.Text>
+              <Tag color="blue">Appointments</Tag>
             </Col>
             <Col span={12} className="text-right">
-              <Typography.Text>1,632</Typography.Text>
+              <Typography.Text strong>1,632</Typography.Text>
             </Col>
             <Col span={12}>
-              <Typography.Text>Visitors</Typography.Text>
+              <Tag color="green">Visitors</Tag>
             </Col>
             <Col span={12} className="text-right">
-              <Typography.Text>1,132</Typography.Text>
+              <Typography.Text strong>1,132</Typography.Text>
             </Col>
           </Row>
         </Card>

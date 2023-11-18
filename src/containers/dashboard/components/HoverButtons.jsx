@@ -17,12 +17,12 @@ export default function HoverButtons() {
       <Col span={6}>
         <Card className="el-tablo">
           <Row>
-            <Col span={12}>
+            <Col span={8}>
               <span className="iconCircle">
                 <CalendarOutlined />
               </span>
             </Col>
-            <Col span={12} className="text-right">
+            <Col span={16} className="text-right">
               <Space direction="vertical" size={6}>
                 <Text className="value">1,622</Text>
                 <Text className="label">Appointments</Text>
@@ -34,12 +34,12 @@ export default function HoverButtons() {
       <Col span={6}>
         <Card className="el-tablo">
           <Row>
-            <Col span={12}>
+            <Col span={8}>
               <span className="iconCircle">
                 <UserOutlined />
               </span>
             </Col>
-            <Col span={12} className="text-right">
+            <Col span={16} className="text-right">
               <Space direction="vertical" size={6}>
                 <Text className="value">1,632</Text>
                 <Text className="label">Users</Text>
@@ -51,12 +51,12 @@ export default function HoverButtons() {
       <Col span={6}>
         <Card className="el-tablo">
           <Row>
-            <Col span={12}>
+            <Col span={8}>
               <span className="iconCircle">
                 <UserAddOutlined />
               </span>
             </Col>
-            <Col span={12} className="text-right">
+            <Col span={16} className="text-right">
               <Space direction="vertical" size={6}>
                 <Text className="value">1,132</Text>
                 <Text className="label">Visitors</Text>
@@ -68,12 +68,12 @@ export default function HoverButtons() {
       <Col span={6}>
         <Card className="el-tablo">
           <Row>
-            <Col span={12}>
+            <Col span={8}>
               <span className="iconCircle">
                 <DollarOutlined />
               </span>
             </Col>
-            <Col span={12} className="text-right">
+            <Col span={16} className="text-right">
               <Space direction="vertical" size={6}>
                 <Text className="value">1,032</Text>
                 <Text className="label">Payments</Text>

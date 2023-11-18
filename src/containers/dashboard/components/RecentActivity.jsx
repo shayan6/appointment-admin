@@ -9,52 +9,52 @@ export default function RecentActivity() {
         <Divider orientation="left" orientationMargin="0%">
           Recent activities
         </Divider>
-        <div class="activity-boxes-w">
-          <div class="activity-box-w">
-            <div class="activity-time">10 Min</div>
-            <div class="activity-box">
-              <div class="activity-avatar">
+        <div className="activity-boxes-w">
+          <div className="activity-box-w">
+            <div className="activity-time">10 Min</div>
+            <div className="activity-box">
+              <div className="activity-avatar">
                 <img alt="" src={avatar} />
               </div>
-              <div class="activity-info">
-                <div class="activity-role">John Mayers</div>
-                <strong class="activity-title">Opened New Account</strong>
+              <div className="activity-info">
+                <div className="activity-role">John Mayers</div>
+                <strong className="activity-title">Opened New Account</strong>
               </div>
             </div>
           </div>
-          <div class="activity-box-w">
-            <div class="activity-time">2 Hours</div>
-            <div class="activity-box">
-              <div class="activity-avatar">
+          <div className="activity-box-w">
+            <div className="activity-time">2 Hours</div>
+            <div className="activity-box">
+              <div className="activity-avatar">
                 <img alt="" src={avatar} />
               </div>
-              <div class="activity-info">
-                <div class="activity-role">Ben Gossman</div>
-                <strong class="activity-title">Posted Comment</strong>
+              <div className="activity-info">
+                <div className="activity-role">Ben Gossman</div>
+                <strong className="activity-title">Posted Comment</strong>
               </div>
             </div>
           </div>
-          <div class="activity-box-w">
-            <div class="activity-time">5 Hours</div>
-            <div class="activity-box">
-              <div class="activity-avatar">
+          <div className="activity-box-w">
+            <div className="activity-time">5 Hours</div>
+            <div className="activity-box">
+              <div className="activity-avatar">
                 <img alt="" src={avatar} />
               </div>
-              <div class="activity-info">
-                <div class="activity-role">Phil Nokorin</div>
-                <strong class="activity-title">Opened New Account</strong>
+              <div className="activity-info">
+                <div className="activity-role">Phil Nokorin</div>
+                <strong className="activity-title">Opened New Account</strong>
               </div>
             </div>
           </div>
-          <div class="activity-box-w">
-            <div class="activity-time">2 Days</div>
-            <div class="activity-box">
-              <div class="activity-avatar">
+          <div className="activity-box-w">
+            <div className="activity-time">2 Days</div>
+            <div className="activity-box">
+              <div className="activity-avatar">
                 <img alt="" src={avatar} />
               </div>
-              <div class="activity-info">
-                <div class="activity-role">Jenny Miksa</div>
-                <strong class="activity-title">Uploaded Image</strong>
+              <div className="activity-info">
+                <div className="activity-role">Jenny Miksa</div>
+                <strong className="activity-title">Uploaded Image</strong>
               </div>
             </div>
           </div>
