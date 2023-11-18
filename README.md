@@ -70,6 +70,7 @@ The Appointment System is a web application designed to manage and schedule appo
    
 3. Set up the database:
 
+   Setup backend using repository: https://github.com/shayan6/appointments
    Create a MySQL database and configure the connection in the application.
    
 4. Run the application:
@@ -93,7 +94,7 @@ If you'd like to contribute to the project, please follow these guidelines:
 
 If you have any questions or concerns, feel free to reach out via email:
 
-- Project Maintainer: [your.email@example.com](mailto:shayanshaikh996@gmail.com)
+- Project Maintainer: [shayanshaikh996@gmail.com](mailto:shayanshaikh996@gmail.com)
 
 ## Acknowledgments
 
