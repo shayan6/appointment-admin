@@ -60,7 +60,7 @@ The Appointment System is a web application designed to manage and schedule appo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/appointment-system.git
+   git clone https://github.com/shayan6/appointment-admin.git
    
 2. Install dependencies:
 
