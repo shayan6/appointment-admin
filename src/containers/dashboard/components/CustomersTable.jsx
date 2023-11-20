@@ -9,22 +9,22 @@ export default function CustomersTable() {
         <Divider orientation="left" orientationMargin="0%">
           Customers
         </Divider>
-        <div class="table-responsive">
-          <table class="table table-padded">
+        <div className="table-responsive">
+          <table className="table table-padded">
             <thead>
               <tr>
                 <th>Assigned Doctor</th>
                 <th>Cutomer</th>
                 <th>Last Comment</th>
                 <th>Reply Date</th>
-                <th class="text-center">Status</th>
+                <th className="text-center">Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <div class="user-with-avatar">
+                  <div className="user-with-avatar">
                     <img
                       alt=""
                       src="https://avatars.githubusercontent.com/u/42208796?v=4"
@@ -36,21 +36,21 @@ export default function CustomersTable() {
                   <span>Shayan Shaikh</span>
                 </td>
                 <td>
-                  <div class="smaller lighter">
+                  <div className="smaller lighter">
                     I have enabled the software for you, you can try now...
                   </div>
                 </td>
                 <td>
                   <span>Today</span>
-                  <span class="smaller lighter">1:52am</span>
+                  <span className="smaller lighter">1:52am</span>
                 </td>
-                <td class="nowrap">
-                  <span class="status-pill smaller green"></span>
+                <td className="nowrap">
+                  <span className="status-pill smaller green"></span>
                   <span>
                     <Tag color="blue">Active</Tag>
                   </span>
                 </td>
-                <td class="row-actions">
+                <td className="row-actions">
                   <Space size={24}>
                     <Button>
                       <EditOutlined />
@@ -63,7 +63,7 @@ export default function CustomersTable() {
               </tr>
               <tr>
                 <td>
-                  <div class="user-with-avatar">
+                  <div className="user-with-avatar">
                     <img
                       alt=""
                       src="https://avatars.githubusercontent.com/u/42208796?v=4"
@@ -75,21 +75,21 @@ export default function CustomersTable() {
                   <span>Shayan Shaikh</span>
                 </td>
                 <td>
-                  <div class="smaller lighter">
+                  <div className="smaller lighter">
                     Please approve this request so we can move...
                   </div>
                 </td>
                 <td>
                   <span>Jan 19th</span>
-                  <span class="smaller lighter">3:22pm</span>
+                  <span className="smaller lighter">3:22pm</span>
                 </td>
-                <td class="nowrap">
-                  <span class="status-pill smaller red"></span>
+                <td className="nowrap">
+                  <span className="status-pill smaller red"></span>
                   <span>
                     <Tag color="green">Closed</Tag>
                   </span>
                 </td>
-                <td class="row-actions">
+                <td className="row-actions">
                   <Space size={24}>
                     <Button>
                       <EditOutlined />
@@ -102,7 +102,7 @@ export default function CustomersTable() {
               </tr>
               <tr>
                 <td>
-                  <div class="user-with-avatar">
+                  <div className="user-with-avatar">
                     <img
                       alt=""
                       src="https://avatars.githubusercontent.com/u/42208796?v=4"
@@ -114,21 +114,21 @@ export default function CustomersTable() {
                   <span>Shayan Shaikh</span>
                 </td>
                 <td>
-                  <div class="smaller lighter">
+                  <div className="smaller lighter">
                     We will need some login credentials to make...
                   </div>
                 </td>
                 <td>
                   <span>Yesterday</span>
-                  <span class="smaller lighter">7:45am</span>
+                  <span className="smaller lighter">7:45am</span>
                 </td>
-                <td class="nowrap">
-                  <span class="status-pill smaller yellow"></span>
+                <td className="nowrap">
+                  <span className="status-pill smaller yellow"></span>
                   <span>
                     <Tag color="orange">Pending</Tag>
                   </span>
                 </td>
-                <td class="row-actions">
+                <td className="row-actions">
                   <Space size={24}>
                     <Button>
                       <EditOutlined />
@@ -141,7 +141,7 @@ export default function CustomersTable() {
               </tr>
               <tr>
                 <td>
-                  <div class="user-with-avatar">
+                  <div className="user-with-avatar">
                     <img
                       alt=""
                       src="https://avatars.githubusercontent.com/u/42208796?v=4"
@@ -153,21 +153,21 @@ export default function CustomersTable() {
                   <span>Shayan Shaikh</span>
                 </td>
                 <td>
-                  <div class="smaller lighter">
+                  <div className="smaller lighter">
                     I have enabled the software for you, you can try now...
                   </div>
                 </td>
                 <td>
                   <span>Jan 23rd</span>
-                  <span class="smaller lighter">2:12pm</span>
+                  <span className="smaller lighter">2:12pm</span>
                 </td>
-                <td class="nowrap">
-                  <span class="status-pill smaller yellow"></span>
+                <td className="nowrap">
+                  <span className="status-pill smaller yellow"></span>
                   <span>
                     <Tag color="orange">Pending</Tag>
                   </span>
                 </td>
-                <td class="row-actions">
+                <td className="row-actions">
                   <Space size={24}>
                     <Button>
                       <EditOutlined />
@@ -180,7 +180,7 @@ export default function CustomersTable() {
               </tr>
               <tr>
                 <td>
-                  <div class="user-with-avatar">
+                  <div className="user-with-avatar">
                     <img
                       alt=""
                       src="https://avatars.githubusercontent.com/u/42208796?v=4"
@@ -192,21 +192,21 @@ export default function CustomersTable() {
                   <span>Shayan Shaikh</span>
                 </td>
                 <td>
-                  <div class="smaller lighter">
+                  <div className="smaller lighter">
                     I have tried this solution but it does not open...
                   </div>
                 </td>
                 <td>
                   <span>Jan 12th</span>
-                  <span class="smaller lighter">9:51am</span>
+                  <span className="smaller lighter">9:51am</span>
                 </td>
-                <td class="nowrap">
-                  <span class="status-pill smaller green"></span>
+                <td className="nowrap">
+                  <span className="status-pill smaller green"></span>
                   <span>
                     <Tag color="green">Active</Tag>
                   </span>
                 </td>
-                <td class="row-actions">
+                <td className="row-actions">
                   <Space size={24}>
                     <Button>
                       <EditOutlined />
@@ -219,7 +219,7 @@ export default function CustomersTable() {
               </tr>
               <tr>
                 <td>
-                  <div class="user-with-avatar">
+                  <div className="user-with-avatar">
                     <img
                       alt=""
                       src="https://avatars.githubusercontent.com/u/42208796?v=4"
@@ -231,21 +231,21 @@ export default function CustomersTable() {
                   <span>Shayan Shaikh</span>
                 </td>
                 <td>
-                  <div class="smaller lighter">
+                  <div className="smaller lighter">
                     I have enabled the software for you, you can try now...
                   </div>
                 </td>
                 <td>
                   <span>Jan 9th</span>
-                  <span class="smaller lighter">12:45pm</span>
+                  <span className="smaller lighter">12:45pm</span>
                 </td>
-                <td class="nowrap">
-                  <span class="status-pill smaller yellow"></span>
+                <td className="nowrap">
+                  <span className="status-pill smaller yellow"></span>
                   <span>
                     <Tag color="orange">Pending</Tag>
                   </span>
                 </td>
-                <td class="row-actions">
+                <td className="row-actions">
                   <Space size={24}>
                     <Button>
                       <EditOutlined />
