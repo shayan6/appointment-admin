@@ -2,7 +2,7 @@
 
 ## Description
 
-The Appointment System is a web application designed to manage and schedule appointments efficiently. It provides a user-friendly interface for both administrators and clients, allowing them to interact with the system seamlessly.
+The Appointment System is a web application designed to manage and schedule the customisable appointments efficiently. It provides a user-friendly interface for both administrators and clients, allowing them to interact with the system seamlessly.
 
 ## Features
 
@@ -35,8 +35,6 @@ The Appointment System is a web application designed to manage and schedule appo
 *Caption for Screenshot 7*
 
 
-<!-- Add more screenshots and captions as needed -->
-
 ## Technologies Used
 
 - React
@@ -52,8 +50,7 @@ The Appointment System is a web application designed to manage and schedule appo
 
 ### Prerequisites
 
-- Node.js
-- MySQL
+- Install and run the backend API application first inside https://github.com/shayan6/appointments
 
 ### Installation
 
