@@ -20,7 +20,7 @@ export default function ConversionsChart() {
       company: "Yesterday",
     },
     {
-      stage: "录取人数",
+      stage: "Test",
       number: 87,
       company: "Yesterday",
     },
@@ -45,7 +45,7 @@ export default function ConversionsChart() {
       company: "Today",
     },
     {
-      stage: "录取人数",
+      stage: "Test",
       number: 117,
       company: "Today",
     },
@@ -74,7 +74,7 @@ export default function ConversionsChart() {
     tooltip: {
       fields: ["stage", "number", "company"],
       formatter: (v) => ({
-        name: `${v.company}的${v.stage}`,
+        name: `${v.company} ${v.stage}`,
         value: v.number,
       }),
     },
