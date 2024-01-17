@@ -20,7 +20,7 @@ export default function NavBar() {
               alt="logo"
               src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
             />
-            <Typography.Text>Ant Design 5.0 </Typography.Text>
+            <Typography.Text>Appointment system</Typography.Text>
           </div>
         </Col>
         <Col span={20}>
