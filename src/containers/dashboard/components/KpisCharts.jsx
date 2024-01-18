@@ -1,6 +1,6 @@
 import React from "react";
 import { DualAxes } from "@ant-design/plots";
-import { Card, Col, Divider, Row } from "antd";
+import { Card } from "antd";
 
 export default function KpisCharts() {
   const uvBillData = [

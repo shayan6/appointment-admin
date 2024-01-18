@@ -1,9 +1,11 @@
 import React from "react";
 import { Gauge, G2 } from "@ant-design/plots";
 import { Card, Col, Divider, Row, Tag, Typography } from "antd";
+import { useSelector } from "react-redux";
 
 export default function GadgesChart() {
-  const { registerShape, Util } = G2; // 自定义 Shape 部分
+  const { registerShape, Util } = G2;
+  const settings = useSelector((state) => state.common.settings);
 
   registerShape("point", "custom-gauge-indicator", {
     draw(cfg, container) {
@@ -64,7 +66,7 @@ export default function GadgesChart() {
     width: 500,
     height: 320,
     range: {
-      color: "#30BF78",
+      color: settings?.color?.colorSuccess || "#30BF78",
     },
     indicator: {
       shape: "custom-gauge-indicator",
