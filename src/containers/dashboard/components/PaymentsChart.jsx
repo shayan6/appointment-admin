@@ -1,8 +1,10 @@
 import React from "react";
 import { Pie, measureTextWidth } from "@ant-design/plots";
 import { Card, Col, Divider, Row } from "antd";
+import { useSelector } from "react-redux";
 
 export default function PaymentsChart() {
+  const settings = useSelector((state) => state.common.settings);
   function renderStatistic(containerWidth, text, style) {
     const { width: textWidth, height: textHeight } = measureTextWidth(
       text,
@@ -70,6 +72,7 @@ export default function PaymentsChart() {
         formatter: (v) => `${v} ¥`,
       },
     },
+    ...(settings?.color && { color: Object.values(settings.color) } ),
     label: {
       type: "inner",
       offset: "-50%",

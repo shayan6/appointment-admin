@@ -28,14 +28,14 @@ try {
     color: {
       colorBlack: '#001529',
       colorWhite: '#f0f2f5',
-      colorPrimary: '#069bd3',
-      colorSecondary: '#3b3b3b',
+      colorPrimary: '#1890ff',
       colorWarning: '#fc9258',
-      colorSuccess: '#01c368',
+      colorSuccess: '#7adbaa',
       colorDanger: '#ff4d57',
-      colorYellow: '#ffeb3b',
       colorPurple: '#673ab7',
-      colorPink: '#E91E63'
+      colorPink: '#E91E63',
+      colorYellow: '#ffeb3b',
+      colorSecondary: '#3b3b3b',
     }
   };
   initialState.settings = initialState.settings ? JSON.parse(initialState.settings) : defaultSetting;

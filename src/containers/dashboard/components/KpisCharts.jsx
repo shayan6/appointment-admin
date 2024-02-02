@@ -1,8 +1,10 @@
 import React from "react";
 import { DualAxes } from "@ant-design/plots";
 import { Card } from "antd";
+import { useSelector } from "react-redux";
 
 export default function KpisCharts() {
+  const settings = useSelector((state) => state.common.settings);
   const uvBillData = [
     {
       time: "2019-03",
@@ -86,12 +88,14 @@ export default function KpisCharts() {
         geometry: "column",
         isGroup: true,
         seriesField: "type",
+        color: [settings?.color?.colorPrimary || "#2fc25b", settings?.color?.colorSuccess || "#30BF78"], // Specify colors for each series
       },
       {
         geometry: "line",
         lineStyle: {
           lineWidth: 2,
         },
+        color: settings?.color?.colorWarning, // Specify colors for each series
       },
     ],
   };

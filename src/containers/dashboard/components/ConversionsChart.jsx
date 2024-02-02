@@ -1,8 +1,10 @@
 import React from "react";
 import { Funnel } from "@ant-design/plots";
 import { Card, Col, Divider, Row } from "antd";
+import { useSelector } from "react-redux";
 
 export default function ConversionsChart() {
+  const settings = useSelector((state) => state.common.settings);
   const data = [
     {
       stage: "Appointments",
@@ -71,6 +73,7 @@ export default function ConversionsChart() {
         formatter: (v) => `${v}`,
       },
     },
+    ...(settings?.color && { color: Object.values(settings.color) } ),
     tooltip: {
       fields: ["stage", "number", "company"],
       formatter: (v) => ({
