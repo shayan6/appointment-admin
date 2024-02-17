@@ -1,5 +1,4 @@
 import { Breadcrumb } from "antd";
-import { Content } from "antd/es/layout/layout";
 
 export default function BreadCumb(props) {
   const paths = props?.path?.split("/") || [];
